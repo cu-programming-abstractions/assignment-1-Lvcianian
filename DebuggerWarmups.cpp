@@ -2,17 +2,17 @@
  * someone reading them for the first time. In this case, though, it's a space
  * for you to write down answers to the three questions asked in this section.
  *
- * Q1:
+ * Q1: Once upon a time, the writer Jorge Luis Borges was unraveling the mysteries of the universe when, without warning, Luka saved Bagan from collective amnesia by setting up an elaborate diversion. THE END!
  *
  *
  *
  *
- * Q2:
+ * Q2: Once I pressed the button "GO!" the window completely dissapeared. In the "Application Output" there was a new line of text "The process crashed."
  *
  *
  *
  *
- * Q3:
+ * Q3: 604, 40, 271, 564, 64, 575, 1020.
  *
  *
  *
@@ -25,10 +25,9 @@
 #include <string>
 using namespace std;
 
-/* TODO: Fill this in with your name before reading the story. Otherwise
- * you'll get the wrong story!
+/* Once upon a time, the writer Jorge Luis Borges was unraveling the mysteries of the universe when, without warning, Luka saved Bagan collective amnesia by setting up an elaborate diversion. THE END!
  */
-const string MyName = "(Your Name Here)";
+const string MyName = "Luka";
 
 namespace {
     void theEnd() {

@@ -1,11 +1,33 @@
 #include "Fire.h"
+#include "random.h"
 using namespace std;
 
 void updateFire(Grid<int>& fire) {
-    /* TODO: The next line just exists to make sure you don't get compiler warning messages
-     * when this function isn't implemented. Delete this comment and the next line, then
-     * implement this function.
-     */
+    int rows = fire.numRows();
+    int cols = fire.numCols();
+
+    Grid<int> newFire = fire;
+
+    for (int row = rows - 2; row >= 0; row--) {
+        for (int col = 0; col < cols; col++) {
+            int value = fire[row + 1][col];
+
+            Vector<int> options;
+            if (col > 0) options += col - 1;
+            options += col;
+            if (col < cols - 1) options += col + 1;
+
+            int targetCol = options[randomInteger(0, options.size() - 1)];
+
+            if(randomChance(2.0 / 3.0) && value > 0) {
+                value -= 1;
+            }
+
+            newFire[row][targetCol] = value;
+        }
+    }
+
+    fire = newFire;
     (void) fire;
 }
 
